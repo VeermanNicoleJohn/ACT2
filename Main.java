@@ -31,5 +31,11 @@ public class Main {
 
         System.out.println(v1.setYear(2027));
         System.out.println(v1.getYear());
+
+        Vehicle invalid1 = new Vehicle("Test", "Old", 1885);
+        System.out.println(invalid1.getYear());
+
+        Vehicle invalid2 = new Vehicle("Test", "Future", 2027);
+        System.out.println(invalid2.getYear());
     }
 }
