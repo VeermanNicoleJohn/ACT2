@@ -1,17 +1,15 @@
-public class Vehicle{
+public abstract class Vehicle implements Serviceable {
+    protected String name;
 
-String brand;
-String model;
-int year;
+    public Vehicle(String name) {
+        this.name = name;
+    }
 
-void displayInfo(){
-   System.out.println(brand +"," + model + "," + year);
-}
-int calculateAge(){
-   return 2026 - year;
-}
+    public void start() {
+        System.out.println(name + " is starting.");
+    }
 
-boolean isVintage(){
-   return calculateAge()>25;
-}
+    public void stop() {
+        System.out.println(name + " has stopped.");
+    }
 }
